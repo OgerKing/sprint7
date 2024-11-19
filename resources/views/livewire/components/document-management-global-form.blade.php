@@ -470,7 +470,7 @@
                                     </span>
                                 </div>
 
-                                @livewire('global-document-pou-powergrid', ['documentId' => $document->id])
+                                @livewire('global-document-p-o-u-powergrid', ['documentId' => $document->id])
                             @endif
                         </div>
 
