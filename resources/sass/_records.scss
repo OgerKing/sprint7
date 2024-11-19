@@ -1,0 +1,424 @@
+.record-pages-container {
+    margin: 0rem 3rem 1rem 3rem;
+}
+
+.record-pages-container  {
+    .selection-header {
+        font-weight: 300;
+        margin-right: 12px;
+        font-size: 24px;
+    }
+
+    .dropdown-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .form-select-inline {
+        display: inline-block;
+        border: none;
+        background: transparent;
+        font-weight: 600;
+        cursor: pointer;
+        appearance: none;
+        padding-right: 30px; /* space for dropdown arrow */
+    }
+
+    .form-select-inline::-ms-expand {
+        display: none; /* Remove default arrow in IE */
+    }
+
+    .bi-caret-down {
+        position: absolute;
+        right: 10px;
+        top: 60%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .records-vertical-divider {
+        height: 100%;
+        width: 2px;
+        padding: 1rem 0;
+        background-color: #bbbcc5;
+    }
+
+    .add-record-button {
+        border-color: #dedee2;
+        background-color: #fff;
+        color: #4b4e65;
+        font-weight: 400;
+        white-space: nowrap;
+        width: auto; /* Ensure it expands to fit content */
+        padding: 0.5rem 1rem; /* Adjust padding as needed */
+    }
+
+    #dropdownMenuButton {
+        display: inline-block;
+        border: none;
+        background: transparent;
+        font-weight: 600;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .search-input-wrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .form-select {
+        width: 40%; /* Set dropdown width */
+    }
+
+    .search-input {
+        padding-right: 2rem; /* Ensure space for the icon */
+        padding-left: 1.5rem; /* Adjust to make space for the line */
+        height: 41px !important; /* Adjust height as needed */
+        border-top-right-radius: 8px !important; /* Adjust radius */
+        border-bottom-right-radius: 8px !important; /* Adjust radius */
+        border: 1px solid #ccc;
+        position: relative;
+        border-left: 2px solid #bbbcc5 !important;
+    }
+
+    .search-icon {
+        right: 10px;
+        pointer-events: none; /* Ensure clicks pass through */
+    }
+
+    .dropdown-wrapper .form-select-inline {
+        border: 1px solid #ccc;
+        background-color: #fff !important; /* Match search input background */
+        color: #333; /* Match text color */
+        font-weight: normal; /* Set text to normal weight */
+        padding: 0.5rem 1rem;
+        border-radius: 8px 0 0 8px; /* Match border radius */
+        border-right: none;
+    }
+
+    .dropdown-menu {
+        z-index: 99999;
+    }
+
+    .dropdown-menu .selected-dropdown-id {
+        position: relative;
+        font-weight: 600;
+    }
+
+    .dropdown-menu .selected-dropdown-id::after {
+        content: '';
+        position: absolute;
+        right: 10px; /* Adjust as needed */
+        top: 50%;
+        transform: translateY(-50%);
+        width: 6px;
+        height: 6px;
+        background-color: #4bd933; /* Dot color */
+        border-radius: 50%;
+    }
+
+    .filter-button {
+        font-size: 14px;
+        font-weight: 500;
+    
+        &:hover {
+          background-color: rgba(53, 111, 97, 0.12);
+          color: $success;
+        }
+    
+        &.shown {
+          background-color: rgba(53, 111, 97, 0.12);
+        }
+    
+        .bi-x {
+          color: black;
+        }
+      }
+    
+      .filters-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-right: 1rem;
+      }
+    
+      .form-switch {
+        font-size: 14px;
+        font-weight: 400;
+        color: #4b4e65;
+      }
+
+      .menu-options .dropdown-toggle  {
+        padding-top: 4px !important;
+      }
+
+      .badge-brownbubble {
+        background-color: #e1b47c; /* Background color */
+        border-radius: 10px; /* Rounded corners */
+        border: 2px solid #8e714f; /* Border thickness and color */
+        color: #000000; /* Text color (optional) */
+        padding: 0.25em 0.5em; /* Padding for better appearance */
+        display: inline-block; /* Ensures the badge behaves like an inline element */
+      }
+
+    .badge-bluebubble {
+        background-color: #c6dbef; /* Background color */
+        border-radius: 10px; /* Rounded corners */
+        border: 2px solid #407aab; /* Border thickness and color */
+        color: #000000; /* Text color (optional) */
+        padding: 0.25em 0.5em; /* Padding for better appearance */
+        display: inline-block; /* Ensures the badge behaves like an inline element */
+    }
+
+}
+
+.tooltip-list {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-list .tooltip-list-content {
+    visibility: hidden;
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-list:hover .tooltip-list-content {
+    visibility: visible;
+}
+
+.tooltip-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tooltip-list ul li {
+    padding: 5px 0;
+    font-size: 14px;
+    position: relative;
+    padding-left: 16px;
+}
+
+/* Diamond-shaped bullets */
+.tooltip-list ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: #b8bbd9; /* Set the color of the diamond here */
+    transform: rotate(45deg); /* Rotate a square to create a diamond */
+}
+
+.custom-table-cell {
+    min-width: 50px;
+    width: max-content;
+    white-space: nowrap;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.custom-checkbox-cell {
+    text-align: center;
+    vertical-align: middle;
+    min-width: 50px;
+    width: max-content;
+    white-space: nowrap;
+}
+
+.custom-table-wrapper {
+    table-layout: auto;
+    width: 100%;
+}
+
+.records-footer-toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1d2146; /* Navy blue color */
+    color: rgb(183, 183, 183);
+    padding: 10px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15); /* Slight shadow */
+}
+
+.records-footer-toolbar .selected-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eedac3; /* Darker blue/purple color */
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Circle shape */
+    margin-right: 10px; /* Add some space between bubble and text */
+}
+
+.records-footer-toolbar .export-button {
+    display: flex;
+    align-items: center;
+    color: rgb(183, 183, 183);
+    background-color: transparent;
+    padding: 6px 12px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.records-footer-toolbar .export-button:hover {
+    color: white; /* Navy blue text */
+    
+}
+
+.records-footer-toolbar .export-button i {
+    margin-right: 6px;
+}
+
+/* Limit styles to records table */
+.records-table input[type="checkbox"] {
+    /* Hide the default checkbox */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #D1D5DB; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block;
+    vertical-align: middle;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* On checked state */
+.records-table input[type="checkbox"]:checked {
+    background-color: #9AE6B4; /* Light green background */
+    border-color: #9AE6B4; /* Change border to match background */
+}
+
+/* Add the checkmark */
+.records-table input[type="checkbox"]:checked::after {
+    content: '\2713'; /* Unicode checkmark */
+    color: #2f855a;
+    font-weight: 700;
+    font-size: 16px;
+    position: absolute;
+    /* top: -2px; */
+    left: 2px;
+    display: block;
+    /* width: 20px; */
+    /* height: 20px; */
+    text-align: center;
+    line-height: 18px;
+}
+
+/* Add hover effect */
+.records-table input[type="checkbox"]:hover {
+    border-color: #A0AEC0; /* Light blue-gray border on hover */
+}
+
+
+.records-table thead th {
+    text-transform: none;  /* Disable uppercase text */
+    color: #6b6a6a;        /* Set text color */
+    font-weight: 500;  
+    font-size: 14px;
+}
+
+
+.subfile-records #subfilesRecordsStatusModal, .subfile-records #subfilesRecordsAttorneyModal{
+    height: 70vh;
+    height:100%;
+    .card{
+    .card-title{
+        padding-bottom: .5rem;
+        margin-bottom: 2rem;
+    }
+    .card-body{
+        height:100%;
+        padding: 0rem 1rem;
+
+        .card-columns{
+            
+            height: 100%;
+            .split-columns{
+                padding:2rem;
+                border-right: 1px solid gray;
+                .subfile-item{
+                    border: 1px solid #DEDEE2;
+                    padding: .5rem;
+                    margin: 1rem 0 ;
+                    border-radius: 10px;
+                }
+                .item-group{
+                    border: 1px solid #DEDEE2;
+                    padding: .5rem;
+                    margin: 1rem 0 ;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+      
+}
+}
+
+
+
+#pod-rights-modal-container, #pou-rights-modal-container{
+     height: 70vh;
+    .card{
+    .card-title{
+        padding-bottom: .5rem;
+        margin-bottom: 1.5rem;
+    }
+    .card-body{
+        height:100%;
+        padding: 0rem 1rem;
+
+        .card-columns{
+            
+            height: 100%;
+            .split-columns{
+                padding:2rem;
+                border-right: 1px solid gray;
+                .item{
+                    border: 1px solid #DEDEE2;
+                    padding: .5rem;
+                    margin: 1rem 0 ;
+                    border-radius: 10px;
+                }
+            }
+            .split-column-2{
+                padding: 2rem;
+            }
+        }
+    }
+      
+}
+    height: 100%;
+   
+    .modal-dialog{
+        max-width: none;
+        width: 70%;
+        min-width: 70%;
+    }
+
+}

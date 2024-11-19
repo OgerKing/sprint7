@@ -1,0 +1,43 @@
+services:
+  # OSE Laravel Application
+  app7:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wrats-app
+    volumes:
+      - $PWD:/var/www/html
+    ports:
+      - "8000:80"
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html/public
+      - DB_CONNECTION=mysql
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_DATABASE=wrats-application
+      - DB_USERNAME=oseroot
+      - DB_PASSWORD=pw
+    depends_on:
+      - mysql7
+    networks:
+      - wrats-net7
+  
+
+  # MySQL Database
+  mysql7:
+    image: mysql
+    container_name: wrats-mysql7
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rpw
+      MYSQL_DATABASE: wrats-application
+      MYSQL_USER: oseroot
+      MYSQL_PASSWORD: pw
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    networks:
+      - wrats-net7
+
+networks:
+  wrats-net7:

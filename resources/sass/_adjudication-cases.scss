@@ -1,0 +1,140 @@
+//Adjudication Cases View
+.adjudications-cases-view {
+  .filter-button {
+    font-size: 14px;
+    font-weight: 500;
+
+    &:hover {
+      background-color: rgba(53, 111, 97, 0.12);
+      color: $success;
+    }
+
+    &.shown {
+      background-color: rgba(53, 111, 97, 0.12);
+    }
+
+    .bi-x {
+      color: black;
+    }
+  }
+
+  .filters-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 1rem;
+  }
+
+  .form-switch {
+    font-size: 14px;
+    font-weight: 400;
+    color: #4b4e65;
+  }
+
+  .adjudications-vertical-divider {
+    height: 100%;
+
+    width: 2px;
+    padding: 1rem 0;
+    background-color: #bbbcc5;
+  }
+
+  .adjudication-button {
+    border-color: #dedee2;
+    background-color: white;
+    color: #4b4e65;
+    font-weight: 400;
+  }
+
+  .progress {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+
+    .progress-bar {
+      height: 1.5rem;
+      border-radius: 8px;
+      background: linear-gradient(0.25turn, #6b71b9, #7b82d7, #353c90);
+    }
+  }
+
+  //Adjudication Edit Form
+  #adjudication-edit-sidebar {
+    .edit-form-message {
+      color: #1b7ac8;
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .offcanvas-body .edit-form {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+
+  //Adjudication changelog 
+  ul.timeline-3 {
+    list-style-type: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.timeline-3:before {
+    content: " ";
+    background: #343e9040;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    width: 1px;
+    top: 10px;
+    height: 98%;
+    z-index: 0;
+  }
+
+  ul.timeline-3>li {
+    margin: 10px 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .change-wrapper {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #dddeea, #fff);
+    border-radius: 20px;
+  }
+
+  ul.timeline-3>li .changelog-title {
+    margin-left: 10px;
+  }
+
+  ul.timeline-3>li .timeline-icon {
+    font-size: 20px;
+    color: #353d90;
+    z-index: 2;
+  }
+
+  .change-details {
+    padding-left: 30px;
+    background: none;
+  }
+
+  .change-details .change-item {
+    margin: 5px 0;
+  }
+
+  .change-details .time-changed {
+    font-size: 14px;
+    color: #4b4e65;
+    font-weight: 300;
+  }
+
+  .change-details .highlight {
+   color: #4b519c;
+  }
+
+
+
+}

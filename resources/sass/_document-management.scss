@@ -1,0 +1,178 @@
+.document-management-forms{
+    height: 100vh;
+    .header{
+        .document{
+            font-size: 24px;
+            font-weight: 200;
+        }
+        .document-title{
+            font-size: 24px;
+            font-weight: 400;
+        }
+    }
+    .image-preview{
+        position:relative;
+        background-color: #C5C6CD;
+        height: 100%;
+        border-radius: 10px;
+        overflow-y:scroll;
+
+        .img-fit{
+            padding: 2rem 0;
+            position: absolute;
+            height: 100%;
+            width: auto;
+        }
+     
+       
+    }
+}
+
+.doc-management-global{
+    height: 60vh;
+
+    .card-body{
+        height: 100%;
+    }
+}
+
+.doc-management-global-form-column{
+
+    overflow-y: scroll;
+    height: 100%;
+}
+
+
+
+.document-management-forms {
+ 
+  .wrats-table-theme {
+    border-radius: 8px;
+    border: 1px solid #dedee2;
+
+    .filler {
+      text-indent: initial;
+      vertical-align: middle;
+      line-height: normal;
+      white-space: nowrap;
+      border-spacing: 2px;
+      width: 42px;
+    }
+    thead{
+      text-transform: capitalize;
+    }
+    thead tr th {
+      background-color: #e2e2e8 !important;
+    }
+    .table {
+      // --bs-table-striped-bg: white !important;
+      // --bs-table-bg: #272d6b !important;
+
+      border-radius: 10px;
+    }
+
+    //This hides the collapse icon on powergrid rows that have no detail data
+    .disable-toggle {
+      .cursor-pointer {
+        display: none;
+      }
+    }
+  }
+
+  .sections-row-detail {
+    tr td {
+      padding-left: 5px;
+    }
+  }
+
+  .sections-row-detail {
+    td {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  tr.detail-rows {
+    border-style: hidden;
+  }
+  tbody.detail-rows {
+    // border-bottom: 1px solid pink;
+    // border-top: 1px solid pink;
+  }
+
+  .wrats-custom-column {
+    background-color: white;
+    td {
+      background-color: white !important;
+    }
+    .table-bordered {
+      border-width: 0 !important;
+    }
+
+    border: none !important;
+    border-width: none !important;
+
+    .no-border-table {
+      border-collapse: collapse;
+    }
+
+    .no-border-table th,
+    .no-border-table td {
+      border: none !important;
+    }
+    div span {
+      font-size: 12px;
+      color: #4b4e65;
+      font-weight: 400;
+    }
+  }
+
+  .table-bordered > :not(caption) > * > * {
+    border-width: 0 !important;
+  }
+
+  .sas-body-class {
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 20px;
+    background-color: white !important;
+    color: #1c1f39;
+  }
+  .cursor-pointer svg {
+    stroke-width: 1 !important;
+    cursor: pointer;
+  }
+  td{
+    background-color:  #FFFFFF !important;
+  }
+}
+
+.wrats-badge{
+  height: 25px;
+  width: 25px;
+  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  font-size: 12px;
+  border-radius: 50px;
+  background-color: #DEDEE2;
+  color:#1C1F39;
+  margin-left: 10px;
+}
+
+//document maangement form attachments
+.attachment-label{
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #4b4e65;
+  font-weight: 400;
+
+}
+
+.upload-new{
+  font-size: 14px;
+  text-transform: uppercase;
+  color: rgb(53, 60, 144);
+  cursor: pointer;
+}

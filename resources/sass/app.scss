@@ -1,0 +1,37 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+
+$primary: #353c90;
+$secondary: #272d6b;
+$test: pink;
+
+$font-family-base: 'Lexend', cursive;
+
+main {
+  background-color: #f2f2f2;
+}
+.h-full {
+  height: 100%;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap'; //TODO: placement of this import is giving us sass errors -MA, it wants to be placed before nested rules
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import './powergrid-overrides.scss';
+@import './navigation.scss';
+@import './my-history.scss';
+@import './component-styles.scss';
+@import './user-account-settings.scss';
+@import './adjudication-cases.scss';
+@import './adjudication-sections-table.scss';
+@import './split-and-combine-view.scss';
+@import './global-documents-view.scss';
+@import './document-management.scss';
+@import './records';
+@import './records-filters';
+
+

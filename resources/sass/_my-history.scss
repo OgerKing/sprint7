@@ -1,0 +1,53 @@
+.my-history-view {
+  .input-row {
+    width: 100%;
+  }
+
+  .history-list {
+    width: 100%;
+
+    .card {
+      margin: 1rem 0;
+
+      .card-body {
+        width: 100%;
+      }
+
+      .history-item-title {
+        font-size: 14px;
+      }
+
+      .history-item-description {
+        font-size: 12px;
+      }
+
+      .history-item-time {
+        font-size: 12px;
+      }
+
+      .history-card-details {
+        width: 100%;
+      }
+    }
+
+    .light-grey {
+      color: #626478;
+      font-size: 12px;
+    }
+  }
+
+  .date-hr {
+    position: relative;
+
+    .badge {
+      font-size: 12px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #dfdfdf;
+      color: #1c1f39;
+      font-weight: 400;
+    }
+  }
+}

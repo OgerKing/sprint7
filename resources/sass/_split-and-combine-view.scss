@@ -1,0 +1,143 @@
+#split-view{
+    min-height: 95vh;
+    .split-container{
+        .split-card{
+            justify-content: center;
+            .card{
+                height: 80vh;
+
+                .card-header{
+                    font-size: 16px;
+                    color: #1C1F39;
+                    font-weight: 600;
+                }
+                .card-body{
+                    overflow-y: scroll;
+                    .section-column{
+                        .available-section-cards{
+                            width: 100%;
+                            
+                            border: 1px solid #DEDEE2;
+                            border-radius: 15px;
+                            padding: 1rem;
+
+                            .form-check-input:checked{
+                                background-color: #77D7BE;
+                            }
+                            .section-name{
+                                color: #4B4E65;
+                                font-weight: 600;
+                                font-size: 14px;
+                            }
+
+       
+                         }
+                    }
+
+                }
+                .card-title{
+                    color: #1C1F39;
+                    font-weight: 600;
+                    font-size: 14px;
+                    
+
+                }
+
+                .card-columns{
+                   
+                    height: 100%;
+                    .split-columns{
+                         border-right: 1px solid gray;
+                          .numbered-badge{
+                             background-color: #DEDEE2;
+                             border-radius: 50px;
+                             color: #1C1F39;
+                             font-weight: 400;
+                           }
+                    }
+                }
+            }
+        }
+
+
+    .selected-section-pill{
+        background-color: #bfdffa;
+        border: 1px solid #1B7AC8;
+        border-radius: 15px;
+        color: #4B4E65;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .badge-pill{
+        background-color: #d6d7e5;
+        color: #626478;
+        font-weight: 400;
+        border-radius: 15px;
+
+    }
+        .selected-badge:hover{
+        cursor: pointer;
+    }
+
+    .add-selected-btn{
+        font-weight: 300;
+        color: #1B7AC8;
+    }
+
+    }
+
+    .split-card-footer{
+        .split-info{
+            color: #4B4E65;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .bi-info-circle{
+            color: #0000EE;
+        }
+    }
+
+    .subsection-count{
+        font-size: 12px;
+        color: #626478;
+    }
+
+
+}
+
+
+
+
+#combine-view{
+    min-height: 95vh;
+
+    .combine-container{
+        width: 50%;
+        .combine-card{
+            .card{
+               
+
+                .card-body{
+                  height: 65vh;
+                overflow-y:scroll;
+                    .form-check-input:checked{
+                                background-color: #77D7BE;
+                                border-color: #77D7BE;
+                            }
+                    .custom-radio{
+                        border: 1px solid #DEDEE2;
+                        padding: 1rem;
+                        border-radius: 20px;
+
+                    }
+
+                    .combine-warning{
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+
+    }
+}

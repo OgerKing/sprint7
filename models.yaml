@@ -1,0 +1,1558 @@
+models:
+    Grant:
+        
+        created_by: string:64
+        grant_code: string:2
+        
+        grant_name: string:200
+        proj: tinyInteger:4 nullable default:null
+     
+        updated_by: string:64
+    
+    Bureau:
+        bureau_name: string:200
+        created_by: string:64
+        updated_by: string:64
+    
+    PouGlobalDocument:
+        created_by: string:64
+        doc_date: dateTime
+        docket_id: string:10
+        pou_global_desc: string:2000    
+        pou_global_id: bigInteger:20 index unsigned
+        pou_global_id_access: bigInteger:20 unsigned
+        pou_global_title: string:300
+     
+        updated_by: string:64
+    UseCode:
+        acres: integer:10 unsigned
+        domestic: integer:10 unsigned
+        old_only: tinyInteger:4 nullable default:null
+        id: increments
+        use_description: string:100
+        use_type_nbr: integer:10 unsigned
+        
+     
+    Condition:
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        comments: string:2000
+        condition_code: char:10
+        
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        program_id: bigInteger:20 index unsigned foreign:program.id
+     
+        updated_by: string:64
+    
+    GlobalDocumentType:
+        created_by: string:64
+        global_document_type_description: string:250  
+        updated_by: string:64
+   
+    PartyAliasType:
+        created_by: string:64
+        party_alias_type_name: string:36
+        updated_by: string:64
+    
+    AdjudicationSectionType:
+        adjudication_section_type_description: string:2000
+        created_by: string:64
+        updated_by: string:64
+    
+    PodUse:
+        
+        created_by: string:64
+        description: string:32
+        pod_use_id: bigInteger:20 index unsigned foreign:pod_use.id
+        
+     
+        updated_by: string:64
+    AttorneyList:
+        
+        attorney_list_name: string:32
+        
+        created_by: string:64
+     
+        updated_by: string:64
+    AdjudicationSection:
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_section_name: string:250
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        
+        boundary_name: string:50
+        
+        created_by: string:64
+        prefix: string:10
+        section_type: string:24
+     
+        updated_by: string:64
+    Adjudication:
+        adjudication_boundary_map_link: string:50
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        
+        adjudication_name: string:50
+        adjudication_nickname: string:50
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        coordinate_system: string:24
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        datum: string:20
+        hydrographic_survey_description: string:2000
+        mapping_zone_central: string:20
+        mapping_zone_east: string:20
+        mapping_zone_west: string:20
+        prefix: string:10
+     
+        updated_by: string:64
+    ClaimStatus:
+        claim_status_code: string:5
+        claim_status_description: string:64
+        
+        
+        created_by: string:64
+     
+        updated_by: string:64
+    UserSetting:
+        
+        created_by: string:64
+        display_name: string:200
+        initials: string:12
+     
+        updated_by: string:64
+        
+        watch_subfile_changes_frequency: string:24
+    OwnerComment:
+        comment: string:4000
+        contact_email_id: bigInteger:20 index unsigned foreign:contact_email.id
+        contact_telephone_id: bigInteger:20 index unsigned foreign:contact_telephone.id
+        
+        created_by: string:64
+        
+        party_id: bigInteger:20 index unsigned foreign:party.id
+        party_status_id: bigInteger:20 index unsigned foreign:party_status.id
+        party_type_id: bigInteger:20 index unsigned foreign:party_type.id
+     
+        updated_by: string:64
+    BasinUser:
+        basin: string:50
+        
+        
+        created_by: string:64
+        gis_duplicate_id: bigInteger:20 index unsigned foreign:gis_duplicate.id
+        login_name: string:64
+     
+        updated_by: string:64
+    PartyStatus:
+        
+        created_by: string:64
+        party_status_description: string:24
+        
+     
+        updated_by: string:64
+    abstractingComment:
+        abstracting_comment: string:4000
+        
+        abstracting_id: bigInteger:20 index unsigned foreign:abstracting.id
+        
+        created_by: string:64
+     
+        updated_by: string:64
+    Country:
+        city_id: bigInteger:20 index unsigned foreign:city.id
+        
+        country_name: string:64
+        
+        created_by: string:64
+        state_id: bigInteger:20 index unsigned
+     
+        updated_by: string:64
+    WaterSource:
+        
+        created_by: string:64
+     
+        updated_by: string:64
+        water_source_description: string:64
+        
+        water_source_sort: bigInteger:20 unsigned
+        water_source_type: char:2
+    Permission:
+        
+        created_by: string:64
+        deny_read_write: tinyInteger:4 nullable default:null
+        p_read: tinyInteger:4 nullable default:null
+        p_write: tinyInteger:4 nullable default:null
+        
+        role_id: bigInteger:20 index unsigned
+        securable_id: bigInteger:20 index unsigned
+     
+        updated_by: string:64
+    Address:
+        addr1: string:30
+        addr_invalid: tinyInteger:4 nullable default:null
+        addr_update: dateTime
+        
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        care_of: string:50
+        cell_phn_hl: string:14
+        city_hl: string:20
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        e_mail_hl: string:50
+        home_phn_hl: string:14
+        label_id: bigInteger:20 index unsigned
+        label_id_access: bigInteger:20 unsigned
+        p_addr_1: string:30
+        p_city_hl: string:20
+        p_state: char:2
+        p_zip: string:10
+        phys_addr_invalid: tinyInteger:4 nullable default:null
+        program_id: bigInteger:20 index unsigned foreign:program.id
+        state: char:2
+     
+        updated_by: string:64
+        work_phn_hl: string:14
+        zip: string:10
+    ContactEmail:
+        
+        
+        created_by: string:64
+        primary_contact_email: string:50
+        primary_contact_email_verified: tinyInteger:4 nullable default:null
+        secondary_contact_email: string:50
+        secondary_contact_email_verified: bigInteger:20 unsigned
+     
+        updated_by: string:64
+    NoUse:
+        assigned_acres: double
+        
+        created_by: string:64
+        flat_rater_id: bigInteger:20 index unsigned foreign:flat_rater.id
+        map_serial: string:255
+        
+        pou_id: bigInteger:20 index unsigned
+        pou_id_access: bigInteger:20 unsigned
+     
+        updated_by: string:64
+    WaterRightComment:
+        
+        created_by: string:64
+        ose_resource: string:64
+     
+        updated_by: string:64
+        water_right_comment: string:1000
+        water_right_comment_category_id: char:18 index
+        
+        water_right_global_documents_id: bigInteger:20 index unsigned foreign:water_right_global_documents.id
+        water_right_id: bigInteger:20 index unsigned foreign:water_right.id
+    MissingPouirr:
+        acres: double
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        area: double
+        basin_nbr_hl: bigInteger:20 unsigned
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        city_id: bigInteger:20 index unsigned foreign:city.id
+        comments: string:250
+        county_id: bigInteger:20 index unsigned foreign:county.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        crop_code: double
+        crop_field: double
+        grant_id: bigInteger:20 index unsigned foreign:grant.id
+        ia_id: string:10
+        ia_no: double
+        irr_sys_type: char:1
+        lo_code: char:1
+        map_nr_acr: string:7
+        map_qtr: char:2
+        
+        mult: string:5
+        no_right: bigInteger:20 unsigned
+        o_photo_no: string:10
+        perimeter: double
+        pl_id: bigInteger:20 index unsigned
+        pl_idaccess: bigInteger:20 unsigned
+        pla_qtr16th: char:1
+        pla_qtr_4th: char:1
+        pla_qtr_64th: char:1
+        pla_rng: char:3
+        pla_sec: char:2
+        pla_tws: char:3
+        pou_comments_id: bigInteger:20 index unsigned foreign:pou_comments.id
+        pou_hl_txt: string:250
+        pou_irrigation_id: bigInteger:20 index unsigned
+        pou_map_txt: string:15
+        pou_status_id: bigInteger:20 index unsigned foreign:pou_status.id
+        pou_tract_txt: string:15
+        program_id: bigInteger:20 index unsigned foreign:program.id
+        subsec_txt: string:15
+     
+        updated_by: string:64
+        work_notes: string:100
+        x: double
+        y: double
+    PodType:
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        county_id: bigInteger:20 index unsigned foreign:county.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        grant_id: bigInteger:20 index unsigned foreign:grant.id
+        pod_comments_id: bigInteger:20 index unsigned foreign:pod_comments.id
+        pod_global_documents_id: bigInteger:20 index unsigned foreign:pod_global_documents.id
+        pod_type_category: char:1
+        pod_type_description: string:20
+        
+        program_id: bigInteger:20 index unsigned foreign:program.id
+     
+        updated_by: string:64
+    DefendantDocument:
+        contact_email_id: bigInteger:20 index unsigned foreign:contact_email.id
+        contact_telephone_id: bigInteger:20 index unsigned foreign:contact_telephone.id
+        
+        created_by: string:64
+        defendant: tinyInteger:4 nullable default:null
+        defendant_document_type_id: bigInteger:20 index unsigned
+        defendant_documents_date: dateTime
+        defendant_documents_desc: string:6
+        
+        docket_id: string:10
+        o_id: bigInteger:20 index unsigned
+        party_id: bigInteger:20 index unsigned foreign:party.id
+        party_status_id: bigInteger:20 index unsigned foreign:party_status.id
+        party_type_id: bigInteger:20 index unsigned foreign:party_type.id
+     
+        updated_by: string:64
+    HsRecommendation:
+        amount_of_water: string:100
+        
+        created_by: string:64
+        hs_recommend: string:50
+        
+     
+        updated_by: string:64
+    Attorney:
+        activity: char:1
+        address: string:64
+        address_2: string:64
+        at_sort: decimal:18,0
+        
+        attorney_id_access: bigInteger:20 unsigned
+        city: string:32
+        
+        created_by: string:64
+        fax: string:32
+        firm: string:64
+        first_name: string:32
+        last_name: string:32
+        phone: string:32
+        selected: tinyInteger:4 nullable default:null
+        state: char:2
+     
+        updated_by: string:64
+        zip: string:9
+    SurfaceZone:
+        cir: double
+        cir_: double
+        
+        created_by: string:64
+        evap_loss: double
+        fdr: double
+        fdr_: double
+        pdr: double
+        pdr_: double
+        surf_zone_description: string:256
+        
+     
+        updated_by: string:64
+    abstractingDocumentType:
+        abstracting_document_type_code: string:5
+        abstracting_document_type_description: string:64
+        abstracting_document_type_hierarchy: bigInteger:20 unsigned
+        
+        
+        created_by: string:64
+     
+        updated_by: string:64
+    AdjudicationXyDatum:
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        program_id: bigInteger:20 index unsigned foreign:program.id
+     
+        updated_by: string:64
+        xy_datum: char:5
+        zone: char:1
+    PodNameHistory:
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        county_id: bigInteger:20 index unsigned foreign:county.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        end_date: timestamp nullable default:null
+        grant_id: bigInteger:20 index unsigned foreign:grant.id
+        pod_basin: string:3
+        pod_comments_id: bigInteger:20 index unsigned foreign:pod_comments.id
+        pod_global_documents_id: bigInteger:20 index unsigned foreign:pod_global_documents.id
+        
+        pod_name_id: bigInteger:20 index unsigned
+        pod_nbr: string:5
+        pod_suffix: string:10
+        program_id: bigInteger:20 index unsigned foreign:program.id
+        proposed: tinyInteger:4 nullable default:null
+        s_id_access: bigInteger:20 unsigned
+        surface_pod_id: bigInteger:20 index unsigned foreign:surface_pod.id
+     
+        updated_by: string:64
+    County:
+        county: char:2
+        
+        county_name: string:20
+        
+        created_by: string:64
+     
+        updated_by: string:64
+    SubfileParty:
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        case_close_date: timestamp nullable default:null
+        case_number: string:32
+        case_open_date: timestamp nullable default:null
+        category: char:2
+        cert_mail: bigInteger:20 unsigned
+        cid_no: string:100
+        contact_email_id: bigInteger:20 index unsigned foreign:contact_email.id
+        contact_telephone_id: bigInteger:20 index unsigned foreign:contact_telephone.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        court_number: bigInteger:20 unsigned
+        
+        created_by: string:64
+        defendant_type_id: bigInteger:20 index unsigned foreign:defendant_type.id
+        file_location_id: bigInteger:20 index unsigned foreign:file_location.id
+        global_document_id: bigInteger:20 index unsigned foreign:global_document.id
+        global_document_type_id: bigInteger:20 index unsigned foreign:global_document_type.id
+        hydrographic_document_type_id: bigInteger:20 index unsigned foreign:hydrographic_document_type.id
+        hydrographic_documents_id: bigInteger:20 index unsigned foreign:hydrographic_documents.id
+        is_case_number_invalid: tinyInteger:4 nullable default:null
+        mailing_address_id: bigInteger:20 index unsigned
+        owner_set: string:25
+        party_id: bigInteger:20 index unsigned foreign:party.id
+        party_interest_type_id: bigInteger:20 index unsigned foreign:party_interest_type.id
+        party_status_id: bigInteger:20 index unsigned foreign:party_status.id
+        party_type_id: bigInteger:20 index unsigned foreign:party_type.id
+        sub_id: bigInteger:20 index unsigned
+        subfile_adjudication_status_id: bigInteger:20 index unsigned
+        subfile_case_status_id: bigInteger:20 index unsigned
+        subfile_id: bigInteger:20 index unsigned
+        
+     
+        updated_by: string:64
+    ClaimFieldCheck:
+        
+        
+        created_by: string:64
+        field_work_code: string:5 index
+        field_work_id: bigInteger:20 index unsigned foreign:field_work.id
+        fld_work_notes: string:2000
+        fld_wrk_date: dateTime
+        fld_wrk_id: bigInteger:20 index unsigned
+        resource_id: bigInteger:20 index unsigned
+        sub_id: bigInteger:20 index unsigned
+     
+        updated_by: string:64
+    ContactTelephone:
+        
+        
+        created_by: string:64
+        primary_contact_telephone_number: string:24
+        primary_contact_telephone_number_verified: tinyInteger:4 nullable default:null
+        secondary_contact_telephone_number: string:24
+        secondary_contact_telephone_number_verified: bigInteger:20 unsigned
+     
+        updated_by: string:64
+    AdjudicationSectionStatus:
+        adjudication_section_status_description: string:2000
+        
+        
+        created_by: string:64
+     
+        updated_by: string:64
+    AttorneyListing:
+        attorney_id: bigInteger:20 index unsigned foreign:attorney.id
+        attorney_list_id: bigInteger:20 index unsigned foreign:attorney_list.id
+        
+    DefendantType:
+        
+        created_by: string:64
+        defendant_type_description: string:200
+        
+     
+        updated_by: string:64
+    PouStatus:
+        
+        created_by: string:64
+        display_line: tinyInteger:4 nullable default:null
+        display_summary: tinyInteger:4 nullable default:null
+        pou_status_code: string:5
+        pou_status_description: string:64
+        
+     
+        updated_by: string:64
+    Irrigation:
+        
+        created_by: string:64
+        
+        pod_is: string:3
+        pod_is_description: string:32
+     
+        updated_by: string:64
+    PouNonIrrigation:
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        city_id: bigInteger:20 index unsigned foreign:city.id
+        county_id: bigInteger:20 index unsigned foreign:county.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        grant_id: bigInteger:20 index unsigned foreign:grant.id
+        map_id_desc: string:60
+        pou_comments_id: bigInteger:20 index unsigned foreign:pou_comments.id
+        pou_global_documents_id: bigInteger:20 index unsigned foreign:pou_global_documents.id
+        
+        pou_status_id: bigInteger:20 index unsigned foreign:pou_status.id
+        program_id: bigInteger:20 index unsigned foreign:program.id
+        r_id_access: bigInteger:20 unsigned
+     
+        updated_by: string:64
+        zone: char:1
+    PodGlobalDocument:
+        
+        created_by: string:64
+        doc_date: dateTime
+        docket_id: string:10
+        pod_global_desc: string:2000
+        
+        pod_global_id: bigInteger:20 index unsigned
+        pod_global_id_access: bigInteger:20 unsigned
+        pou_global_title: string:300
+     
+        updated_by: string:64
+    ConditionComment:
+        condition_comment: string:4000
+        
+        condition_id: bigInteger:20 index unsigned foreign:condition.id
+        
+        created_by: string:64
+     
+        updated_by: string:64
+    PodWaterRight:
+        acre_ft_pri: double
+        acres_pri: double
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        county_id: bigInteger:20 index unsigned foreign:county.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        grant_id: bigInteger:20 index unsigned foreign:grant.id
+        percent_cfs: double
+        pod_comments_id: bigInteger:20 index unsigned foreign:pod_comments.id
+        pod_global_documents_id: bigInteger:20 index unsigned foreign:pod_global_documents.id
+        
+        priority_date_id: bigInteger:20 index unsigned
+        program_id: bigInteger:20 index unsigned foreign:program.id
+     
+        updated_by: string:64
+        water_right_global_documents_id: bigInteger:20 index unsigned foreign:water_right_global_documents.id
+        water_right_id: bigInteger:20 index unsigned foreign:water_right.id
+    WaterBasin:
+        
+        created_by: string:64
+        quarter_report_configuration_id: bigInteger:20 index unsigned
+     
+        updated_by: string:64
+        water_basin_code: string:3
+        water_basin_description: string:64
+        
+    PodRight:
+        acre_ft_pri: double
+        acres_pri: double
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        county_id: bigInteger:20 index unsigned foreign:county.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        grant_id: bigInteger:20 index unsigned foreign:grant.id
+        pdate_txt: string:2000
+        percent_cfs: double
+        pod_comments_id: bigInteger:20 index unsigned foreign:pod_comments.id
+        pod_global_documents_id: bigInteger:20 index unsigned foreign:pod_global_documents.id
+        
+        priority_date: string:10
+        priority_notes: string:2000
+        program_id: bigInteger:20 index unsigned foreign:program.id
+        r_id: bigInteger:20 index unsigned
+        surface_pod_id: bigInteger:20 index unsigned foreign:surface_pod.id
+    DbFile:
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        basin_user_id: bigInteger:20 index unsigned foreign:basin_user.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        
+        db_id: bigInteger:20 index unsigned
+        db_id_access: bigInteger:20 unsigned
+        nbr: string:5
+        program_id: bigInteger:20 index unsigned foreign:program.id
+        suffix: string:5
+     
+        updated_by: string:64
+    ContactAddress:
+        
+        created_by: string:64
+        mailing_address_address_1: string:50
+        mailing_address_address_2: string:50
+        mailing_address_city: string:50
+        mailing_address_country: string:5
+        
+        mailing_address_postal_code: bigInteger:20 unsigned
+        mailing_address_state: string:2
+        mailing_address_verified: tinyInteger:4 nullable default:null
+        physical_address_address_1: string:50
+        physical_address_address_2: string:50
+        physical_address_city: string:50
+        physical_address_country: string:5
+        physical_address_postal_code: bigInteger:20 unsigned
+        physical_address_state: string:2
+        physical_address_verified: tinyInteger:4 nullable default:null
+     
+        updated_by: string:64
+    AdjudicationDocument:
+        adjudication_document_code: string:10
+        
+        adjudication_document_title: string:100
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        
+        created_by: string:64
+        document_name: string:64
+        document_sort: double
+        document_status: double
+        event_code: bigInteger:20 unsigned
+     
+        updated_by: string:64
+        wrats_status_indicator: string:3
+    GisDuplicate:
+        basin: string:27
+        
+        created_by: string:64
+        
+        dupeid: integer:10 unsigned
+        number: bigInteger:20 unsigned
+        table_type: string:27
+     
+        updated_by: string:64
+    AdjudicationDocumentProgram:
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        program_id: bigInteger:20 index unsigned foreign:program.id
+     
+        updated_by: string:64
+    GroundPod:
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        county_id: bigInteger:20 index unsigned foreign:county.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        diameter_in: double
+        dom_map_label: string:50
+        grant_id: bigInteger:20 index unsigned foreign:grant.id
+        
+        ground_pod_source_text: string:2000
+        irrigation_id: bigInteger:20 index unsigned foreign:irrigation.id
+        log_filed: timestamp nullable default:null
+        outside_adjudication_section: tinyInteger:4 nullable default:null
+        pod_comments_id: bigInteger:20 index unsigned foreign:pod_comments.id
+        pod_global_documents_id: bigInteger:20 index unsigned foreign:pod_global_documents.id
+        pod_wuc: string:3
+        power_source: string:11
+        program_id: bigInteger:20 index unsigned foreign:program.id
+        pump_code: string:6
+        source_ug: string:10
+     
+        updated_by: string:64
+    HydrographicDocumentType:
+        
+        created_by: string:64
+        hydrographic_document_type_description: string:250
+        
+     
+        updated_by: string:64
+    EbidParcel:
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        city_id: bigInteger:20 index unsigned foreign:city.id
+        county_id: bigInteger:20 index unsigned foreign:county.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        ebid_id: bigInteger:20 index unsigned
+        
+        file_location_id: bigInteger:20 index unsigned foreign:file_location.id
+        global_document_id: bigInteger:20 index unsigned foreign:global_document.id
+        global_document_type_id: bigInteger:20 index unsigned foreign:global_document_type.id
+        grant_id: bigInteger:20 index unsigned foreign:grant.id
+        hydrographic_document_type_id: bigInteger:20 index unsigned foreign:hydrographic_document_type.id
+        hydrographic_documents_id: bigInteger:20 index unsigned foreign:hydrographic_documents.id
+        parcel_acres: float
+        parcel_num: bigInteger:20
+        pou_comments_id: bigInteger:20 index unsigned foreign:pou_comments.id
+        pou_global_documents_id: bigInteger:20 index unsigned foreign:pou_global_documents.id
+        pou_non_irr_id: bigInteger:20 index unsigned
+        pou_status_id: bigInteger:20 index unsigned foreign:pou_status.id
+        program_id: bigInteger:20 index unsigned foreign:program.id
+        subfile_adjudication_status_id: bigInteger:20 index unsigned
+        subfile_case_status_id: bigInteger:20 index unsigned
+        subfile_id: bigInteger:20 index unsigned
+     
+        updated_by: string:64
+        water_right_global_documents_id: bigInteger:20 index unsigned foreign:water_right_global_documents.id
+        water_right_id: bigInteger:20 index unsigned foreign:water_right.id
+    AmountCategory:
+        
+        amt_cfs: tinyInteger:4 nullable default:null
+        amt_cir: tinyInteger:4 nullable default:null
+        amt_con_use: tinyInteger:4 nullable default:null
+        amt_depth: tinyInteger:4 nullable default:null
+        amt_div_rt_hl: tinyInteger:4 nullable default:null
+        amt_fdr: tinyInteger:4 nullable default:null
+        amt_pdr: tinyInteger:4 nullable default:null
+        amt_surf_area: tinyInteger:4 nullable default:null
+        amt_txt: tinyInteger:4 nullable default:null
+        amt_type_desc: string:50
+        amt_type_id: string:5
+        amt_volume: tinyInteger:4 nullable default:null
+        
+        created_by: string:64
+     
+        updated_by: string:64
+    HydrographicDocument:
+        
+        created_by: string:64
+        hydrographic_document_name: string:64
+        hydrographic_document_owner: string:64
+        hydrographic_document_owner_date: dateTime
+        hydrographic_document_owner_status: string:12
+        hydrographic_document_owner_type: string:20
+        hydrographic_document_type_id: bigInteger:20 index unsigned foreign:hydrographic_document_type.id
+        
+     
+        updated_by: string:64
+    abstractingDocumentOwner:
+        abs_doc_id: bigInteger:20 index unsigned
+        abs_doc_name_id: bigInteger:20 index unsigned
+        abstracting_document_detail_id: bigInteger:20 index unsigned foreign:abstracting_document_detail.id
+        
+        doc_fname: char:25
+        doc_lname: char:30
+    SurfacePod:
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        county_id: bigInteger:20 index unsigned foreign:county.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        ditch_name_aka: string:50
+        ditch_name_hl: string:50
+        grant_id: bigInteger:20 index unsigned foreign:grant.id
+        pod_comments_id: bigInteger:20 index unsigned foreign:pod_comments.id
+        pod_global_documents_id: bigInteger:20 index unsigned foreign:pod_global_documents.id
+        program_id: bigInteger:20 index unsigned foreign:program.id
+        
+        surface_pod_source_text: string:2000
+     
+        updated_by: string:64
+    Court:
+        
+        court_jurisdiction: string:30
+        court_name: string:64
+        
+        created_by: string:64
+     
+        updated_by: string:64
+    PouWaterRight:
+        county_id: bigInteger:20 index unsigned foreign:county.id
+        
+        created_by: string:64
+        pou_comments_id: bigInteger:20 index unsigned foreign:pou_comments.id
+        pou_global_documents_id: bigInteger:20 index unsigned foreign:pou_global_documents.id
+        pou_status_id: bigInteger:20 index unsigned foreign:pou_status.id
+        
+        priority_date_id: bigInteger:20 index unsigned
+     
+        updated_by: string:64
+        water_right_global_documents_id: bigInteger:20 index unsigned foreign:water_right_global_documents.id
+        water_right_id: bigInteger:20 index unsigned foreign:water_right.id
+    AdjudicationHydroBoundaryType:
+        adjudication_hydro_boundary_type_description: string:2000
+        
+        
+        created_by: string:64
+     
+        updated_by: string:64
+    AdjudicationStatus:
+        adjudication_status_description: string:2000
+        
+        
+        created_by: string:64
+     
+        updated_by: string:64
+    AdjudicationSubsection:
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_section_name: string:250
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_subsection_name: char:18
+        
+        
+        created_by: string:64
+        hydro_boundary_type: string:50
+        prefix: string:10
+        section_type: string:24
+        subsection_status: string:24
+     
+        updated_by: string:64
+    AdjudicationDocumentType:
+        
+        
+        created_by: string:64
+        defendant_document_type_description: string:250
+     
+        updated_by: string:64
+    ImportError:
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        error_datetime: dateTime
+        error_description: string:500
+        
+        program_id: bigInteger:20 index unsigned foreign:program.id
+        table_name: string:50
+     
+        updated_by: string:64
+        user_name: string:50
+    PartyType:
+        
+        created_by: string:64
+        
+        party_type_name: string:36
+     
+        updated_by: string:64
+    Program:
+        
+        access_gis: bigInteger:20 unsigned
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        basin_section: char:1
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        extra_sub_file_tab: tinyInteger:4 nullable default:null
+        gis: tinyInteger:4 nullable default:null
+        gis_dir: string:100
+        last_import: dateTime
+        program_id: bigInteger:20 index unsigned foreign:program.id
+        show_estate: tinyInteger:4 nullable default:null
+     
+    PartyInterestType:
+        
+        created_by: string:64
+        party_interest_type: string:20
+        
+     
+        updated_by: string:64
+    AttorneyAttorneyList:
+        id: false
+        attorney_list_id: bigInteger:20 index unsigned foreign:attorney_list.id
+        attorney_id: bigInteger:20 index unsigned foreign:attorney.id
+        
+        created_by: string:64
+     
+        updated_by: string:64
+    Synopsi:
+        abs_id_chama: bigInteger:20 unsigned
+        abs_res_id: bigInteger:20 index unsigned
+        
+        abstracting_name: string:64
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        edit_date: timestamp nullable default:null
+        program_id: bigInteger:20 index unsigned foreign:program.id
+        s_id: bigInteger:20 index unsigned
+     
+        updated_by: string:64
+    City:
+        
+        city_name: string:64
+        
+        created_by: string:64
+        state_id: string:2
+     
+        updated_by: string:64
+    GlobalDocument:
+        
+        created_by: string:64
+        doc_date: dateTime
+        docket_id: string:10
+        global_desc: string:2000
+        
+        global_document_type_id: bigInteger:20 index unsigned foreign:global_document_type.id
+        global_id: bigInteger:20 index unsigned
+        global_id_access: bigInteger:20 unsigned
+        global_title: string:300
+     
+        updated_by: string:64
+    WaterRightUse:
+        acres: bigInteger:20 unsigned
+        
+        created_by: string:64
+        domestic: bigInteger:20 unsigned
+        old_only: tinyInteger:4 nullable default:null
+     
+        updated_by: string:64
+        use_type_nbr: bigInteger:20 unsigned
+        water_right_use_code: string:3
+        water_right_use_description: string:128
+        
+    DocumentDefinition:
+        
+        created_by: string:64
+        def_doc_sort: smallInteger:6
+        def_doc_status: bigInteger:20 unsigned
+        definition: string:6
+        
+        document_definition_name: string:50
+     
+        updated_by: string:64
+    abstractingDocumentPou:
+        abs_doc_id: bigInteger:20 index unsigned
+        abs_doc_pou_id: bigInteger:20 index unsigned
+        abs_notes: string:2000
+        abstracting_document_detail_id: bigInteger:20 index unsigned foreign:abstracting_document_detail.id
+        
+        acres: double
+        also_desc: string:2000
+        cid_desc: string:2000
+        match_deed: tinyInteger:4 nullable default:null
+        mult: string:4
+        owner: string:255
+        pla_rng: char:3
+        pla_sec: char:2
+        pla_tws: char:3
+        plaqtr16th: string:1
+        plaqtr4th: string:1
+        plaqtr64th: string:1
+        priority_date: dateTime
+        record_order: decimal:18,0
+        subsec_txt: string:255
+        tract: string:10
+        wat_source: string:100
+    WaterRightGlobalDocument:
+        
+        created_by: string:64
+        doc_date: dateTime
+        docket_id: string:10
+     
+        updated_by: string:64
+        water_right_global_desc: string:2000
+        
+        water_right_global_id: bigInteger:20 index unsigned
+        water_right_global_id_access: bigInteger:20 unsigned
+        water_right_global_title: string:300
+    PartyTypeSubtype:
+        
+        created_by: string:64
+        
+        party_type_subtype_name: string:36
+     
+        updated_by: string:64
+    PartyAlias:
+        contact_email_id: bigInteger:20 index unsigned foreign:contact_email.id
+        contact_telephone_id: bigInteger:20 index unsigned foreign:contact_telephone.id
+        
+        created_by: string:64
+        entity_name: string:64
+        first_name: string:20
+        last_name: string:50
+        middle_name: string:20
+        
+        party_alias_type_id: bigInteger:20 index unsigned foreign:party_alias_type.id
+        party_id: bigInteger:20 index unsigned foreign:party.id
+        party_status_id: bigInteger:20 index unsigned foreign:party_status.id
+        party_type_id: bigInteger:20 index unsigned foreign:party_type.id
+     
+        updated_by: string:64
+    GroundPodComment:
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        ground_pod_comment: string:4000
+        
+        ground_pod_id: bigInteger:20 index unsigned foreign:ground_pod.id
+        irrigation_id: bigInteger:20 index unsigned foreign:irrigation.id
+     
+        updated_by: string:64
+    ClaimType:
+        claim_type_code: string:5
+        claim_type_description: string:64
+        
+        
+        created_by: string:64
+     
+        updated_by: string:64
+    Pod:
+        
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        county_id: bigInteger:20 index unsigned foreign:county.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        crew_nbr: smallInteger:6
+        f_photo_nbr: string:20
+        grant_id: bigInteger:20 index unsigned foreign:grant.id
+        lat_deg: decimal:8,4
+        lat_min: decimal:8,4
+        lat_sec: decimal:8,4
+        location_data_source: string:2000
+        lon_deg: decimal:8,4
+        lon_min: decimal:8,4
+        lon_sec: decimal:8,4
+        lot: string:24
+        map_id_desc: string:60
+        map_qtr: char:2
+        ose_file: string:75
+        plss_description: string:250
+        pod_basin: string:3
+        pod_comments_id: bigInteger:20 index unsigned foreign:pod_comments.id
+        pod_field_no: string:10
+        pod_global_documents_id: bigInteger:20 index unsigned foreign:pod_global_documents.id
+        pod_hl_txt: string:100
+        pod_loc_date: dateTime
+        pod_loc_time: dateTime
+        pod_location_description: string:250
+        pod_map_txt: string:15
+        pod_name: string:2000
+        pod_nbr: string:5
+        pod_subfile: string:15
+        pod_suffix: string:10
+        pod_tract_txt: string:15
+        pod_type_id: bigInteger:20 index unsigned foreign:pod_type.id
+        point_qual: string:10
+        program_id: bigInteger:20 index unsigned foreign:program.id
+        qtr_16th: char:1
+        qtr_4th: char:1
+        qtr_64th: char:1
+        rng: char:5
+        s_id_access: bigInteger:20 unsigned
+        s_type_cat: char:1
+        sec: char:2
+        selected: tinyInteger:4 nullable default:null
+        std_dev: double
+        sub_sec_txt: string:15
+        tws: char:3
+     
+        updated_by: string:64
+        waters_pod_id: string:15
+        well_define: smallInteger:6
+        x: double
+        xy_datum: string:5
+        y: double
+        zone: char:1
+    abstractingDocumentDetail:
+        abs_doc_idaccess: bigInteger:20 unsigned
+        abs_doc_nbr: string:50
+        abs_doc_pdate: string:10
+        abs_doc_pdate_txt: string:255
+        abs_mw_id: string:255
+        
+        abstracting_document_type_id: bigInteger:20 index unsigned foreign:abstracting_document_type.id
+        abstracting_id: bigInteger:20 index unsigned foreign:abstracting.id
+        addr1: string:30
+        addr2: string:30
+        approved_date: dateTime
+        chg_own_from: string:2000
+        chg_own_to: string:2000
+        city: string:15
+        
+        created_by: string:64
+        doc_comment: text
+        doc_use: string:255
+        field_chk: string:4000
+        include: tinyInteger:4 nullable default:null
+        map: string:50
+        ose_file_date: dateTime
+        part_sold: tinyInteger:4 nullable default:null
+        pod_basin: string:3
+        pod_nbr: string:5
+        pod_suffix: string:250
+        qtr_16th: string:1
+        qtr_4th: string:1
+        qtr_64th: string:1
+        qty_af_ac: string:6
+        qty_af_yr: string:7
+        qty_ir_ac: string:7
+        rng: string:3
+        sec: string:2
+        state: char:2
+        supp: tinyInteger:4 nullable default:null
+        tract: string:10
+        tws: string:3
+     
+        updated_by: string:64
+        waters_status_id: bigInteger:20 index unsigned foreign:waters_status.id
+        x: string:10
+        y: string:10
+        zip: string:10
+    WatersStatus:
+        
+        created_by: string:64
+     
+        updated_by: string:64
+        waters_status_code: string:3
+        waters_status_description: string:128
+        
+    PodComment:
+        
+        created_by: string:64
+        pod_comment_date: date
+        pod_comment_description: string:250
+        pod_comment_resource: string:64
+        pod_comment_type: string:36
+        
+     
+        updated_by: string:64
+        work_notes: string:100
+        pod_id: bigInteger:20 index unsigned foreign:pod.id
+    ClaimResolution:
+        claim_resolution_code: string:3
+        claim_resolution_description: string:128
+        
+        
+        created_by: string:64
+     
+        updated_by: string:64
+    WaterRight:
+        accounting_period_date: string:20
+        accounting_period_duration: bigInteger:20 unsigned
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        amount_category_id: bigInteger:20 index unsigned foreign:amount_category.id
+        amount_txt: text
+        annual_evaporative_loss: decimal:12,4
+        cfs: double
+        cid_rt_acr: double
+        comments: text
+        con_water_use: double
+        cond: char:10
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        depth: double
+        detailed_purpose_of_use_id: bigInteger:20 index unsigned
+        div_rt_hl: double
+        ebid_txt: string:255
+        file_location_id: bigInteger:20 index unsigned foreign:file_location.id
+        global_document_id: bigInteger:20 index unsigned foreign:global_document.id
+        global_document_type_id: bigInteger:20 index unsigned foreign:global_document_type.id
+        hs_doc_heading: char:1
+        hs_pou_notes: text
+        hs_recommend: string:50 index
+        hs_recommendation_id: bigInteger:20 index unsigned foreign:hs_recommendation.id
+        hydrographic_document_type_id: bigInteger:20 index unsigned foreign:hydrographic_document_type.id
+        hydrographic_documents_id: bigInteger:20 index unsigned foreign:hydrographic_documents.id
+        map_nbr: bigInteger:20 unsigned
+        no_right: tinyInteger:4 nullable default:null
+        off_nr_acr: double
+        off_rt_acr: double
+        offset_indicator: string:20
+        ose_file: string:75
+        other_amount_restrictions: string:20
+        purpose_of_use_category_id: bigInteger:20 index unsigned
+        purpose_txt: string:255
+        r_id_access: bigInteger:20 unsigned
+        rev_hs_acr: tinyInteger:4 nullable default:null
+        right_description: string:64
+        right_status_id: bigInteger:20 index unsigned
+        rt_fdr: double
+        rt_prim_gw: double
+        specific_purpose_of_use_id: bigInteger:20 index unsigned
+        subfile_adjudication_status_id: bigInteger:20 index unsigned
+        subfile_case_status_id: bigInteger:20 index unsigned
+        subfile_id: bigInteger:20 index unsigned
+        surf_zone_id: bigInteger:20 index unsigned
+        surface_area: double
+        tot_rt_acr: double
+        tx_acres: double
+     
+        updated_by: string:64
+        volume: double
+        water_duty: double
+        water_right_global_documents_id: bigInteger:20 index unsigned foreign:water_right_global_documents.id
+        
+        water_right_status_id: bigInteger:20 index unsigned
+        water_right_use_id: bigInteger:20 index unsigned foreign:water_right_use.id
+        water_source_id: bigInteger:20 index unsigned foreign:water_source.id
+        work_notes: string:4000
+    WaterRightCommentCategory:
+        category_name: char:18
+        
+        created_by: string:64
+     
+        updated_by: string:64
+        
+    WratsUser:
+        ad_user_name: string:64
+        
+        created_by: string:64
+     
+        updated_by: string:64
+        
+    FileLocation:
+        
+        created_by: string:64
+        file_location_description: string:36
+        
+     
+        updated_by: string:64
+    AdjudicationCourt:
+        
+        case_number: string:50
+        court_docket_link: string:120
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        docket_number: string:24
+        judge_name: string:100
+        judge_signature_image_file_name: binaryMysql:1 ##Note: Datatype unsupported in Laravel. You might want to manually review this.
+     
+        updated_by: string:64
+    PouComment:
+        
+        created_by: string:64
+        pou_comment_date: date
+        pou_comment_description: string:250
+        pou_comment_resource: string:64
+        pou_comment_type: string:36
+        
+        pou_id: char:18
+     
+        updated_by: string:64
+        work_notes: string:100
+    Party:
+        address_id: bigInteger:20 index unsigned foreign:address.id
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        assoc: tinyInteger:4 nullable default:null
+        atty_id: bigInteger:20 index unsigned
+        authorized_agent: tinyInteger:4 nullable default:null
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        caretaker: tinyInteger:4 nullable default:null
+        contact_email_id: bigInteger:20 index unsigned foreign:contact_email.id
+        contact_telephone_id: bigInteger:20 index unsigned foreign:contact_telephone.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        department: string:50
+        division: string:50
+        entity_name: string:64
+        first_name: string:50
+        former: tinyInteger:4 nullable default:null
+        gov: smallInteger:6
+        individual: tinyInteger:4 nullable default:null
+        is_deceased: tinyInteger:4 nullable default:null
+        last_name: string:50
+        middle_name: string:50
+        p_idaccess: bigInteger:20 unsigned
+        p_sort: bigInteger:20 unsigned
+        party_alias_id: bigInteger:20 index unsigned foreign:party_alias.id
+        party_end_date: timestamp nullable default:null
+        party_entity: smallInteger:6
+        
+        party_start_date: timestamp nullable default:null
+        party_status_id: bigInteger:20 index unsigned foreign:party_status.id
+        party_type_id: bigInteger:20 index unsigned foreign:party_type.id
+        program_id: bigInteger:20 index unsigned foreign:program.id
+        sovereign: string:50
+        special_handling_instructions: string:250
+        suffix: string:15
+     
+        updated_by: string:64
+        verified: tinyInteger:4 nullable default:null
+    PodDbFile:
+        adjudication_courts_id: bigInteger:20 index unsigned foreign:adjudication_courts.id
+        adjudication_document_id: bigInteger:20 index unsigned foreign:adjudication_document.id
+        adjudication_document_type_id: bigInteger:20 index unsigned foreign:adjudication_document_type.id
+        adjudication_hydro_boundary_type_id: bigInteger:20 index unsigned foreign:adjudication_hydro_boundary_type.id
+        adjudication_id: bigInteger:20 index unsigned foreign:adjudication.id
+        adjudication_section_status_id: bigInteger:20 index unsigned foreign:adjudication_section_status.id
+        adjudication_section_type_id: bigInteger:20 index unsigned foreign:adjudication_section_type.id
+        adjudication_sections_id: bigInteger:20 index unsigned foreign:adjudication_sections.id
+        adjudication_status_id: bigInteger:20 index unsigned foreign:adjudication_status.id
+        bureau_id: bigInteger:20 index unsigned foreign:bureau.id
+        county_id: bigInteger:20 index unsigned foreign:county.id
+        court_id: bigInteger:20 index unsigned foreign:court.id
+        
+        created_by: string:64
+        db_id: bigInteger:20 index unsigned
+        grant_id: bigInteger:20 index unsigned foreign:grant.id
+        pod_comments_id: bigInteger:20 index unsigned foreign:pod_comments.id
+        
+        pod_global_documents_id: bigInteger:20 index unsigned foreign:pod_global_documents.id
+        program_id: bigInteger:20 index unsigned foreign:program.id
+        surface_pod_id: bigInteger:20 index unsigned foreign:surface_pod.id
+     
+        updated_by: string:64
+    FlatRater:
+        assigned_acres: double
+        
+        created_by: string:64
+        
+        map_serial: string:255
+        pl_id: bigInteger:20 index unsigned
+        pl_id_access: bigInteger:20 unsigned
+     
+        updated_by: string:64
+    FieldWork:
+        
+        created_by: string:64
+        field_work_code: string:5
+        field_work_description: string:64
+        
+     
+        updated_by: string:64
+    DefendantDocumentsType:
+        
+        created_by: string:64
+        defendant_document_type_code: char:2
+        defendant_document_type_description: string:64
+        
+        offer_exclude: tinyInteger:4 nullable default:null
+        report: string:64
+        sort: bigInteger:20 unsigned
+     
+        updated_by: string:64
+models:
+    Action:
+        action_code: string:5
+        action_description: string:64
+        created_by: string:64
+        updated_by: string:64
+    Associated:
+        created_by: string:64
+        updated_by: string:64
+        water_right_status_description: string:250
+    AuditTrail:
+        created_by: string:64
+        operation_type: string:16
+        row_values: mediumText
+        source_id: integer:11 index unsigned
+        source_name: string:64
+        updated_by: string:64

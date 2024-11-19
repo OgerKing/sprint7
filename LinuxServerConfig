@@ -1,0 +1,14 @@
+Started with Docker install from here: https://docs.docker.com/engine/install/ubuntu/
+
+Had to create my own home directory /home/dostrander 
+add myself as an owner 
+sudo chown -R dostrander:dostrander /home/dostrander
+and set correct file permissions
+find /home/dostrander -type d -exec chmod 755 {} \;
+
+sudo cp -a /home/ialexander/. /home/dostrander/
+sudo chown -R dostrander:dostrander /home/dostrander
+sudo find /home/dostrander -type d -exec chmod 755 {} \;
+
+sudo usermod -s /bin/bash dostrander
+

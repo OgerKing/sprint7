@@ -1,0 +1,564 @@
+#wrats-app-container {
+  height:100%;
+  //Header
+  .header {
+    font-size: 24px;
+    color: #1c1f39;
+    font-weight: 600;
+  }
+  .form-styles {
+    font-family: 'Lexend', cursive;
+    font-weight: 300;
+  }
+  .form-control:disabled,
+  .form-control[readonly] {
+    background-color: #f2f4f7 !important;
+  }
+
+  .form-floating {
+    height: 45px;
+  }
+
+  // // Inputs
+
+  //UA DROPDOWN SELECT
+  .ua-dropdown-select {
+    .dropdown-menu {
+      width: 100%;
+    }
+  }
+
+  //INPUTS
+  .input-component {
+    .input-label-with-tooltip {
+      position: absolute;
+      top: 0;
+      padding: 0.25rem 0.75rem 0rem;
+      font-size: 10px;
+      text-transform: uppercase;
+      color: #4b4e65;
+      font-weight: 400;
+    }
+
+    .basic-text-input {
+      max-height: 50px !important;
+      min-height: 45px !important;
+      font-size: 16px;
+    }
+    .input-label {
+      font-size: 12px;
+    }
+  }
+
+  //Basic Text Input
+  .input-label {
+    color: #4b4e65;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+
+  //TExtarea
+  .text-area-component {
+    .input-label-with-tooltip {
+      width: 96%;
+      background-color: white;
+      padding: 0;
+      margin-top: 1px;
+      margin-right: 5px;
+    }
+  }
+
+  //File Upload
+  .file-upload-component {
+    position: relative;
+    color: #1c1f39;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    input {
+      //opacity: 0 //we could do this but it also hides the name of the file which i dont like! -MA TODO:
+      border: 2px dotted #bbbcc5;
+      padding: 1.5rem;
+      border-radius: 15px;
+      width: 100%;
+      padding: 3rem 30% 1rem;
+      cursor: pointer;
+    }
+    label {
+      position: absolute;
+      top: 20px;
+      right: 0;
+      left: 0;
+      text-align: center;
+    }
+  }
+
+  //Dropdown Select
+
+  .menu-options.form-floating > .input-label {
+    padding: 2px 0.75rem;
+  }
+  .menu-options {
+    width: 100%;
+
+    .dropdown-menu {
+      .form-check-input:checked {
+        background-color: #77d7be;
+        border-color: #77d7be;
+      }
+    }
+    .dropdown-toggle {
+      width: 100%;
+      border-style: solid;
+      border-color: rgb(222, 226, 230);
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      padding-top: 1rem;
+    }
+  }
+
+  .wrats-dropdown-select {
+    .input-label-with-tooltip {
+      position: absolute;
+      top: 0;
+      padding: 0.25rem 0.75rem 0rem;
+      font-size: 10px;
+      text-transform: uppercase;
+      color: #4b4e65;
+      font-weight: 400;
+    }
+    select {
+      text-align: left;
+    }
+    .form-styles {
+      height: 50px;
+    }
+    .dropdown-toggle {
+      font-size: 16px;
+    }
+  }
+
+  .dropdown-toggle {
+    background-color: transparent;
+  }
+
+  //Search Input
+  .search-input-wrapper {
+    .search-icon {
+      background-color: white;
+    }
+    .search-input {
+      border-left: none;
+      height: 45px;
+    }
+    .search-input.form-control:focus {
+      box-shadow: 0 0 0 0.1rem rgba(53, 60, 144, 0.25);
+    }
+  }
+
+  //Date Range Picker
+  .daterangepicker {
+    td.in-range {
+      background-color: rgba(222, 226, 230, 40%);
+    }
+    td.start-date,
+    td.end-date {
+      background-color: #77d7be;
+      color: #1c1f39;
+    }
+    .drp-buttons {
+      .applyBtn.btn {
+        background-color: #77d7be;
+        border-color: #77d7be;
+        color: #1c1f39;
+      }
+      .cancelBtn.btn {
+        background-color: rgba(222, 226, 230, 40%);
+        border-color: rgba(222, 226, 230, 40%);
+        color: #1c1f39;
+      }
+    }
+  }
+
+  //DATE RANGE PICKER
+  .date-range-div {
+    .date-range-input {
+      border-radius: 6px;
+      border-color: rgb(222, 226, 230);
+      border-style: solid;
+      height: 45px;
+      border-width: 1px;
+      width: 100%;
+      font-size: 14px;
+      color: #1c1f39;
+      padding: 1rem 0.75rem 5px;
+    }
+  }
+  .date-range-picker-container {
+    .input-group-text.calendar-icon {
+      position: absolute;
+      right: 0;
+      background: transparent;
+      border-left: none;
+      height: 100%;
+    }
+  }
+
+  //BUTTON
+
+  .btn-green {
+    background-color: #77d7be;
+  }
+
+  .btn-grey {
+    background-color: rgba(222, 226, 230, 40%);
+  }
+
+  .btn-w-100 {
+    width: 100%;
+  }
+
+  //SNACKBAR NOTIFICATION
+  #flash-message {
+    z-index: 9999;
+    width: 500px;
+    border-radius: 10px;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: white;
+
+    &.snackbar-success {
+      border: 1px solid green;
+      border-left: 10px solid green;
+
+      .message-title {
+        color: #037532;
+      }
+    }
+
+    &.snackbar-error {
+      border: 1px solid red;
+      border-left: 10px solid red;
+
+      .message-title {
+        color: red;
+      }
+    }
+    &.snackbar-warning {
+      border: 1px solid #f3bf07;
+      border-left: 10px solid #f3bf07;
+
+      .message-title {
+        color: #f3bf07;
+      }
+    }
+    &.snackbar-info {
+      border: 1px solid #1b7ac8;
+      border-left: 10px solid #1b7ac8;
+
+      .message-title {
+        color: #1b7ac8;
+      }
+    }
+
+    .message-title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .message {
+      font-size: 14px;
+      color: #4b4e65;
+      font-weight: 400;
+    }
+    .close-message {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  // ADJUDICATION CARDS
+  .adjudication-cards-component {
+    .card-container {
+      clear: left;
+      min-height: 500px;
+
+      .adjudication-card {
+        color: #1c1f39;
+        height: 100%;
+        padding: 1rem 0;
+        background-color: white;
+        border: 1px solid #dedee2;
+        border-radius: 10px;
+        font-size: 14px;
+        .card-section {
+          padding: 0 1rem;
+        }
+
+        .card-title {
+          font-size: 16px;
+          font-weight: 600;
+        }
+        .nickname {
+          font-weight: 400;
+        }
+        .coord-system {
+          font-weight: 400;
+        }
+        .coord-direction {
+          font-weight: 600;
+        }
+        .boundary-link {
+          color: #4b519c;
+          font-weight: 500;
+        }
+
+        .highlight {
+          font-weight: 500;
+          color: #4b519c;
+        }
+
+        .sections-managed {
+          .management {
+            font-weight: 700;
+            color: #1c1f39;
+          }
+        }
+
+        .badge {
+          .default {
+            background-color: rgba(61, 162, 102, 0.15);
+            color: #037532;
+            font-weight: 400;
+          }
+          &.Final-Decree {
+            background-color: rgba(61, 162, 102, 0.15);
+            color: #037532;
+            font-weight: 400;
+          }
+
+          &.Hydrographic-Survey {
+            background-color: rgba(243, 191, 7, 0.12);
+            color: #7d6203;
+            font-weight: 400;
+          }
+
+          &.Settlement {
+            background-color: rgba(74, 149, 212, 0.12);
+            color: #4a95d4;
+            font-weight: 400;
+          }
+          &.Adjudication {
+            background-color: rgba(74, 149, 212, 0.12);
+            color: #4a95d4;
+            font-weight: 400;
+          }
+          &.Archived {
+            background-color: rgba(74, 149, 212, 0.12);
+            color: #4a95d4;
+            font-weight: 400;
+          }
+          &.Inter-Se {
+            background-color: rgba(74, 149, 212, 0.12);
+            color: #4a95d4;
+            font-weight: 400;
+          }
+          &.Judicial {
+            background-color: rgba(74, 149, 212, 0.12);
+            color: #4a95d4;
+            font-weight: 400;
+          }
+          &.Post-Final-Decree {
+            background-color: rgba(74, 149, 212, 0.12);
+            color: #4a95d4;
+            font-weight: 400;
+          }
+          &.Partial-Final-Decree {
+            background-color: rgba(74, 149, 212, 0.12);
+            color: #4a95d4;
+            font-weight: 400;
+          }
+          &.Active-Adjudication {
+            background-color: rgba(74, 149, 212, 0.12);
+            color: #4a95d4;
+            font-weight: 400;
+          }
+        }
+        .basin-icon {
+          margin-right: 0.5rem;
+        }
+        .court-cases {
+          .cc-title {
+            font-weight: 500;
+          }
+          .courts {
+            color: #4b519c;
+          }
+        }
+      }
+    }
+  }
+
+  .subfile-type-badge {
+    color: $primary;
+    border: 1px solid #dedee2;
+    border-radius: 8px;
+    padding: 5px;
+    width: fit-content;
+    .subfile-badge-number {
+      font-weight: 700;
+    }
+  }
+
+  .watching-subfiles-component {
+    .badge-pill {
+      border-radius: 8px;
+
+      color: #1c1f39;
+      font-weight: 500;
+      font-size: 12px;
+      background-color: rgba(141, 143, 157, 0.12);
+    }
+  }
+
+  #caj-form {
+    .badge-pill {
+      background-color: #dedee2;
+      width: fit-content;
+      font-size: 12px;
+      font-weight: 500;
+      color: #1c1f39;
+    }
+  }
+
+  .adjudications-options-dropdown {
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+    }
+    .dropdown-item .li-label {
+      margin-left: 10px;
+      font-weight: 300;
+      font-size: 14px;
+      color: #4b4e65;
+    }
+  }
+
+  //SIDEBARS
+
+  .offcanvas {
+    border-radius: 10px;
+  }
+
+  //EDIT SIDEBAR
+  #adjudication-edit-sidebar,
+  #adjudication-add-sidebar {
+    .mapping-title {
+      font-weight: 600;
+      color: #4b4e65;
+      font-size: 14px;
+      margin-bottom: 0.5rem;
+    }
+    .edit-datum {
+      margin: 1rem 0;
+      .datum {
+        color: #626478;
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+      .datum-value {
+        font-size: 14px;
+        color: #4b4e65;
+        font-weight: 400;
+      }
+    }
+    .edit-mode {
+      color: #1b7ac8;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+
+  #adjudication-status-dropdown-select {
+    .dropdown-menu {
+      width: 100%;
+    }
+  }
+
+  .text-danger.inline-error-msg {
+    font-size: 12px;
+  }
+
+  #staticBackdrop {
+    .modal-dialog {
+      max-width: 80%;
+    }
+  }
+  #adjudicationSectionsModal,
+  #courtsAndJudgesModal {
+    .modal-dialog {
+      max-width: 60%;
+    }
+    .form-back-button {
+      color: #4b519c;
+
+      .btn {
+        color: #4b519c;
+      }
+    }
+  }
+
+  .modal-dialog-scrollable .modal-content {
+    height: 85%;
+  }
+
+  .wrats-tooltip{
+    .tooltip-content{
+      display: none;
+    }
+    &:hover{
+      .tooltip-content{
+        position:absolute;
+        display:inline-block;
+        background-color: rgba(222, 222, 226, 0.7);
+        padding: 5px;
+        border-radius: 5px;
+        color: black;
+        font-size: 15px;
+        text-transform: none;
+        width: max-content;
+        max-width: 150px;
+        top: -10px;
+        margin-left: 10px;
+        font-weight: 300;
+        z-index: 3;
+        text-align:center;
+      }
+
+      .tooltip-content:before{
+            content:'';
+    display:block;
+    width:0;
+    height:0;
+    position:absolute;
+
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right:8px solid rgba(222, 222, 226, 0.7);
+    left:-8px;
+
+    top:7px;
+      }
+     
+    } 
+
+  }
+
+  
+}
+

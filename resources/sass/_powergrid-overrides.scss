@@ -1,0 +1,44 @@
+.wrats-custom-powergrid {
+  .table-responsive {
+    border-radius: 10px;
+    thead tr th {
+      background-color: #f3f3f5;
+      font-size: 12px;
+      text-transform: capitalize;
+      color: #4b4e65;
+      font-weight: 400;
+    }
+  }
+  .table-header {
+    /* Add your styling here */
+    background-color: pink;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .table-cell {
+    /* Add your styling here */
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+#sections-row-detail-container {
+  tr th {
+    min-width: 50px;
+    width: max-content;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding: 0.5rem 0.5rem;
+  }
+  tr td {
+    vertical-align: middle;
+    line-height: normal;
+    white-space: nowrap;
+    padding: 0.5rem 0.5rem !important;
+  }
+}

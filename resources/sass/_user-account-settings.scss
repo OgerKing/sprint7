@@ -1,0 +1,20 @@
+.user-account-settings-view {
+  .ua-header {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  .form-floating {
+    .basic-input {
+      height: 45px;
+    }
+  }
+  .account-settings-container {
+    background-color: white;
+
+    .ua-btn-row .btn {
+      width: 100%;
+    }
+  }
+}

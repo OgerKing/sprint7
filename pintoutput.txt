@@ -1,0 +1,63 @@
+
+  ...................................................................................................................................................
+  ...................................................................................................................................................
+  ...................................................................................................................................................
+  .................✓.....
+
+  ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── Laravel  
+    FIXED   .......................................................................................................... 464 files, 1 style issue fixed  
+  ✓ tests/Feature/Http/Controllers/WratsUserApplicationHistoryControllerTest.php                       class_attributes_separation, trim_array_spaces  
+  @@ -28,7 +28,6 @@
+           $response->assertViewHas('wratsUserApplicationHistories');
+       }
+   
+  -
+       #[Test]
+       public function create_displays_view(): void
+       {
+  @@ -38,7 +37,6 @@
+           $response->assertViewIs('wratsUserApplicationHistory.create');
+       }
+   
+  -
+       #[Test]
+       public function store_uses_form_request_validation(): void
+       {
+  @@ -57,10 +55,9 @@
+           $response->assertRedirect(route('wratsUserApplicationHistories.index'));
+           $response->assertSessionHas('wratsUserApplicationHistory.id', $wratsUserApplicationHistory->id);
+   
+  -        $this->assertDatabaseHas(wratsUserApplicationHistories, [ /* ... */ ]);
+  +        $this->assertDatabaseHas(wratsUserApplicationHistories, [/* ... */]);
+       }
+   
+  -
+       #[Test]
+       public function show_displays_view(): void
+       {
+  @@ -73,7 +70,6 @@
+           $response->assertViewHas('wratsUserApplicationHistory');
+       }
+   
+  -
+       #[Test]
+       public function edit_displays_view(): void
+       {
+  @@ -86,7 +82,6 @@
+           $response->assertViewHas('wratsUserApplicationHistory');
+       }
+   
+  -
+       #[Test]
+       public function update_uses_form_request_validation(): void
+       {
+  @@ -109,7 +104,6 @@
+           $response->assertRedirect(route('wratsUserApplicationHistories.index'));
+           $response->assertSessionHas('wratsUserApplicationHistory.id', $wratsUserApplicationHistory->id);
+       }
+  -
+   
+       #[Test]
+       public function destroy_deletes_and_redirects(): void
+  
+

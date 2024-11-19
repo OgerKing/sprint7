@@ -1,0 +1,44 @@
+#wrats-navigation.navbar {
+  height: 66px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  .account-avatar {
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  .btn-group {
+    background-color: $secondary;
+    border-radius: 20px !important;
+
+    .btn {
+      padding: 10px 25px;
+      border-radius: 10px !important;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 400 !important;
+      font-size: 14px;
+      border-color: transparent !important;
+    }
+    .btn.active {
+      background-color: #656dd2;
+      color: #ffffff;
+      border-radius: 10px !important;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+
+  .menu-options {
+    .dropdown-item {
+      font-weight: 300;
+      color: #4b4e65;
+      &:hover {
+        cursor: pointer;
+      }
+      i {
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+//Adjudication Sections and Subsections Powergrid Table styles
+.adjudication-sections-table-container {
+  min-height: 90vh;
+
+  .wrats-table-theme {
+    border-radius: 20px;
+    border: 1px solid #dedee2;
+    min-height: 500px;
+    .filler {
+      text-indent: initial;
+      vertical-align: middle;
+      line-height: normal;
+      white-space: nowrap;
+      border-spacing: 2px;
+      width: 42px;
+    }
+    thead tr th {
+      background-color: #dedee2;
+    }
+    .table {
+      // --bs-table-striped-bg: white !important;
+      // --bs-table-bg: #272d6b !important;
+
+      border-radius: 10px;
+    }
+
+    //This hides the collapse icon on powergrid rows that have no detail data
+    .disable-toggle {
+      .cursor-pointer {
+        display: none;
+      }
+    }
+  }
+
+  .sections-row-detail {
+    td {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  tr.detail-rows {
+    border-style: hidden;
+  }
+  tbody.detail-rows {
+    // border-bottom: 1px solid pink;
+    // border-top: 1px solid pink;
+  }
+
+  .wrats-custom-column {
+    background-color: white;
+    td {
+      background-color: white !important;
+    }
+    .table-bordered {
+      border-width: 0 !important;
+    }
+
+    border: none !important;
+    border-width: none !important;
+
+    .no-border-table {
+      border-collapse: collapse;
+    }
+
+    .no-border-table th,
+    .no-border-table td {
+      border: none !important;
+    }
+    div span {
+      font-size: 12px;
+      color: #4b4e65;
+      font-weight: 400;
+    }
+  }
+
+  .table-bordered > :not(caption) > * > * {
+    border-width: 0 !important;
+  }
+
+  .sas-body-class {
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 20px;
+    color: #1c1f39;
+  }
+  .cursor-pointer svg {
+    stroke-width: 1 !important;
+    cursor: pointer;
+  }
+}
+
+.width-80 {
+  min-width: 80px;
+  width: max-content;
+}
+
+.width-100 {
+  min-width: 100px;
+  width: max-content;
+}
+
+.width-150 {
+  min-width: 150px;
+  width: max-content;
+}
+
+.width-200 {
+  min-width: 200px;
+  width: max-content;
+}
+.width-230 {
+  min-width: 230px;
+  width: max-content;
+}

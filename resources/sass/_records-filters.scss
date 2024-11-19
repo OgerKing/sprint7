@@ -1,0 +1,101 @@
+.filter-sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 9999;
+}
+
+//Scrollbar styles
+/* Custom Scrollbar for .records-filters-container */
+.records-filters-container::-webkit-scrollbar {
+    width: 4px; /* Thin scrollbar width */
+}
+.records-filters-container::-webkit-scrollbar-track {
+    background: transparent; /* Remove the gutter background */
+}
+.records-filters-container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded edges for the thumb */
+    border: none; /* Remove border  */
+}
+
+.records-filters-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker thumb color on hover */
+}
+
+/* For Firefox */
+.records-filters-container {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #888 transparent; /* Thumb color and track color */
+}
+//End Scrollbar Styles
+
+
+.records-filters-container{
+    border: 1px solid #DEDEE2;
+    border-radius: 8px;
+    // box-shadow: 0px 8px 16px 0px rgba(25, 29, 69, 0.12);
+    max-height: 300px;
+    overflow-y: scroll;
+    top:0;
+ 
+    .collapse {
+        transition: all .8s ease; 
+    }
+
+    .form-check-input:checked{
+        background-color: #77D7BE;
+    }
+    .form-check{
+        .form-check-label{
+            white-space: normal !important;
+            word-wrap: break-word;
+        }
+    }
+    .filter-main-title{
+        font-size: 16px;
+        padding: 1rem 0 .5rem;
+        font-weight: 400;
+    }
+
+    //Adjudication Section Filters
+    .adj-section-filter-outline{
+        border: 1px solid #DEDEE2;
+        border-radius: 8px;
+        padding: 1rem;
+        margin:1rem 0;
+        .adj-section-filter-title{
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+
+    //status and element types filter
+
+    .status-filters, .person-filters, .location-filters{
+        &.filter-dropdown-outline{
+                border: 1px solid #DEDEE2;
+                border-radius: 8px;
+                padding: .7rem;
+                margin:1rem 0;
+                background-color: #F3F3F5;
+                color: #4B4E65;
+                .filter-dropdown-title{
+                    font-size: 14px;
+                    font-weight: 700;
+                    margin-bottom: 0;
+                }
+            .dropdown-filter-options-list{
+                    margin-top: 1rem;
+                }
+            }
+    }
+    
+   
+
+
+
+
+
+
+}

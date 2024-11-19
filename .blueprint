@@ -1,0 +1,16 @@
+created:
+    - database/seeders/CourtCasesSeeder.php
+    - database/seeders/OwnerCommentsSeeder.php
+    - database/seeders/PersonAliasTypesSeeder.php
+    - database/seeders/PersonAliasesSeeder.php
+    - database/seeders/PersonsSeeder.php
+    - database/seeders/SubfileClaimsSeeder.php
+    - database/seeders/SubfileFieldCheckNotesSeeder.php
+    - database/seeders/SubfileOseWorkSummaryNotesSeeder.php
+    - database/seeders/SubfileOwnerHistoriesSeeder.php
+    - database/seeders/SubfilePersonsSeeder.php
+    - database/seeders/SubfilesSeeder.php
+models:
+    Action: { action_code: 'string:5', action_description: 'string:64', id: increments, created_at: 'timestamp nullable default:null', created_by: 'string:64', updated_at: 'timestamp nullable default:null', updated_by: 'string:64' }
+    Associated: { created_at: 'timestamp nullable default:null', created_by: 'string:64', updated_at: 'timestamp nullable default:null', updated_by: 'string:64', water_right_status_description: 'string:250', id: increments }
+    AuditTrail: { id: increments, created_at: 'timestamp nullable default:null', created_by: 'string:64', operation_type: 'string:16', row_values: mediumText, source_id: 'integer:11 index unsigned', source_name: 'string:64', updated_at: 'timestamp nullable default:null', updated_by: 'string:64' }
