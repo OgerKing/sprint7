@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\POD;
+use App\Models\Pod;
 use Illuminate\Database\Seeder;
 
-class PODSeeder extends Seeder
+class PodSeeder extends Seeder
 {
     /**
      * Run the database seeds.
