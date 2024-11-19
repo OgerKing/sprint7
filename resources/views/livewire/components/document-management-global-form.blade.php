@@ -459,7 +459,7 @@
                                     </span>
                                 </div>
 
-                                @livewire('global-document-pod-powergrid', ['documentId' => $document->id])
+                                @livewire('global-document-p-o-d-powergrid', ['documentId' => $document->id])
                             @endif
 
                             @if ($document->global_document_p_o_us->count() > 0)
