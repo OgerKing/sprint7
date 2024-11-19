@@ -1,0 +1,30 @@
+====== WRATS Modernization Knowledge Base ======
+
+**Welcome to the WRATS Modernization application!**
+
+The Knowledgebase is your source of all information related to WRATS and relevant reference materials. __**To get started with WRATS, visit the [[:quick_start|Quick Start]] page.**__ It provides a brief overview of the application features and instructions how to easily navigate.
+
+The User Guide provides detailed information regarding each major feature in the application.
+
+Additional Knowledgebase articles provide business insights relevant to the Adjudication process.
+
+===== Knowledgebase Links =====
+
+==== User Guide ====
+
+  * [[:navigation_bar|Navigation Bar]]
+  *  [[:record_listing_page|Record Listing Page]]
+      * [[:subfiles|Subfiles]]
+      * [[:parties|Parties]]
+      * [[:authorized_agents|Authorized Agents]]
+      * [[:water_rights|Water Rights]]
+      * [[:sources_points_of_diversion|Sources (Points of Diversion)]]
+      * [[:places_places_of_use|Places (Places of Use)]]
+      * [[:documents|Documents]]
+  * [[:adjudications|Adjudications]]
+  * [[:reports|Document Manager]]
+  * [[:reports|Reports]]
+  *  [[:avatar_options|Avatar options]]
+      * [[:account_settings|Account Settings]]
+      * [[:my_history|My History]]
+

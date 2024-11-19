@@ -1,0 +1,20 @@
+====== Document Manager ======
+
+Throughout WRATS you will have the ability to ineract with uploaded documents. Here is how to use the document manager:
+
+  - Open the Document Manager by clicking on a document row.{{:doc-row.jpg?nolink&|doc-row.jpg}}
+  - Edit document details by clicking the three dot action button located at the top right of the Document Manager and then 'Edit Details' \\ {{:three-dot-edit.jpg?nolink&|doc-row.jpg}}
+  - Save edits by clicking 'Save Edits' \\ {{:save-edits-doc.jpg?nolink&|doc-row.jpg}}
+
+==== Other Options on the Document Manager: ====
+
+  - Clicking the three dot action button you can also (with proper permissions):
+      - Download a Document to your computer
+      - Archive a Document (if the document was uploaded in error. There is no delete.)
+      - See changes to the document by clicking "Change Log"
+
+==== Related Content: ====
+
+  * [[:upload_a_signed_document_from_the_record_list_screen|Upload a Signed Document from the Record List Screen]]
+  * [[:upload_a_signed_document_to_a_subfile|Upload a Signed Document to a Subfile]]
+

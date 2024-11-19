@@ -1,0 +1,28 @@
+====== WRATS Quick Start  ======
+
+Welcome to the WRATS Quick Start guide! This guide is intended to familiarize you with the basics of WRATS. If you need to dive deeper on any feature, simply search the knowledge base.
+
+**Here are 6 items you should know to get started with WRATS:**
+
+   - **Record Types**:  The main types of items that can be searched for and edited in WRATS.
+      - //Subfiles//: you can think of a subfile like a manilla file folder that holds all the important information needed to get to signed pleading documents for one or more person(s).
+      - //Persons//: people, companies or organizations that have some sort of interest in a water right
+      - //Authorized Agents//: representatives of persons which could be attorneys, corporate contacts etc
+      - //Water Rights//: record of information about a specific water right
+      - //Points of Diversions (PODs)//: this is information about where water is being diverted off a main source of water. This could include ditches, wells or ponds.
+      - //Places of Use (POUs)//: this is information about where water is actually being used in a location
+      - //Documents//: any finalized documents that have been uploaded to WRATS will be listed on the documents record list.
+  - **Navigation**
+      - Click 'Records' at the top of the screen to see all records for a record type.
+      - Change Record Type list by clicking the drop down in the top left
+      - Search and Filter to find specific records
+      - Click on a row to view individual record details
+      - Use the breadcrumbs to get back where you need to go {{:kb_nav.png?nolink&800}}\\{{:kb_subfile.png?nolink&400}}
+  - **Reports and Document Generation**
+      - Click 'Reports' from the top main navigation
+      - Find a template you would like to use (Note: the filters can be helpful here.)
+      - Follow the prompts to generate your report 
+  - **Three Dot Action button**:  Throughout WRATS you will see a three dot action button. This is will you will find additional actions that can be taken on a record. \\ {{:kb_dots.png?nolink&50}}
+  - **Change Log**:  Each record will have a change log that will show you all changes to a record. You can access the change log by clicking the three dot action button. 
+  - **Watch Subfile**: at the top of a subfile record type, you can toggle on 'Watch Subfile'. This will allow you to get email notifications when any changes happen to subfile you are watching. \\ {{:kb_watch.png?nolink&400}}
+

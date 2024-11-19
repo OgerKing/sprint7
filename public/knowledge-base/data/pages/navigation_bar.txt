@@ -1,0 +1,36 @@
+====== Navigation Bar ======
+
+{{:navbar.png?nolink|}}
+
+The Navigation Bar is located at the top of every WRATS Modernization page.
+It includes the following links which provide access to all key features of the application.
+Clicking on an option will redirect you to that section of the application.
+
+  * **[[Records]]**
+      * The Record List feature quickly allows a user to navigate to various types of records: 
+        * [[Subfiles]]
+        * [[Parties]]
+        * [[Authorized Agents]]
+        * [[Water Rights]]
+        * [[Sources (Points of Diversion)]]
+        * [[Places  (Places of Use)]]
+        * [[Documents]]
+
+  * **[[Adjudications]]**
+    * Adjudications are the overarching container for Subfiles related to court cases. Details include
+        * Overview information
+        * Related Subfiles
+        * Related cases
+        * Courts
+        * Judges
+
+  * **[[Reports]]**
+    * The Reports option allows users to create their own reports based on provided templates.
+
+  * **Avatar** 
+      * Avatar options reflect information specific to the user. Options include
+        * [[Account Settings]]
+        * [[My History]]
+        * Knowledgebase
+        * Support
+        * Logout

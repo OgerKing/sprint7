@@ -1,0 +1,24 @@
+====== My History ======
+
+The My History page displays your previously visited records. It provides features to quickly find and navigate to a record of interest.
+
+===== Filtering =====
+You can filter by 3 means:
+  * Type a label which identifies a record of interest in the SEARCH control.
+  * Select a date or date range reflecting the add or last change date of a record.
+  * Select the Type of Record you are looking for.
+The filters can be used separately or in tandem.
+Once you see the record of interest, click on it and you will be directed to the appropriate page populated with that records data.
+
+==== Type a label which identifies a record of interest in the SEARCH control. ====
+{{:myhistory_filters.png?nolink&600|}}
+
+==== Select a date or date range reflecting the add or last change date of a record. ====
+{{:myhistory_datepicker.png?nolink&400|}}
+
+==== Select the Type of Record you are looking for. ====
+{{:myhistory-recordtypefilter.png?nolink&200|}}
+
+==== Navigate to a selected record ====
+Once you see the record of interest, click on it and you will be directed to the appropriate page populated with that records data.
+{{:myhistory.png?nolink&400|}}

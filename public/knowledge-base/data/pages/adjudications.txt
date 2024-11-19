@@ -1,0 +1,42 @@
+====== Adjudications ======
+
+{{:adjudications-menu.jpg?nolink&800|adjudications-card.jpg}}
+
+  - To access Adjudications, click 'Adjudications' from the main menu at the top of the screen.
+  - **Cards:**  Each card shows a high level overview of an adjudication including:
+      - Title of an adjudication
+      - Nickname of an adjudciation
+      - Status of an adjudication
+      - Coordinate System Information
+      - An External Link to the adjudcation boundary
+      - The number of Sections and the name of the bureau managing the adjudcation
+      - The total number of subfiles and how many are finalized vs still in progress
+      - Counts for how many other record types are included in the adjudcation
+      - The number of subfiles the current user is watching
+      - The court case(s) for this adjudication \\ {{:adjudications-card.jpg?nolink&500|adjudications-card.jpg}}
+  - **Filtering Adjudications**
+      - Open Filters by clicking 'Filters' (under the main navigation)
+      - Select Filters
+      - Click 'Apply Filters' \\ {{:adjudications-filter.jpg?nolink&800|adjudications-filter.jpg}}
+  - **Adjudication Actions (all can be accessed by the 'three dot' action button.**
+      - Editing Adjudication Information. With appropriate permission, you can edit the basic adjudication information and change the status of the adjudication. \\ {{:edit-adjudication.png?nolink&200|edit-adjudication.png}}
+  - Viewing Sections: you can view the section of the adjudication by clicking the three dot action button and clicking 'Sections'
+      - Adding Sections: click 'add section' button, complete the form and submit the form
+      - Editing Sections: click the three dot button at the end of the section row, click 'edit'.{{:adj-sections.png?nolink&800|adj-sections.png}}
+  - Courts and Judges: access from the Adjudication Card three dot button
+      - Adding Courts: Click 'Add Court Case' button, fill out form and submit
+      - Editing Courts: Click the three dot button, click edit and make edits to the form \\ {{:adj-courts.png?nolink&800|adj-courts.png}}
+  - Adding New Adjudications
+      - Click the 'Add New Adjudication' button from the right of the Adjudication screen, fill out the form and save.
+  - Split Adjudication: click the three dot button and select 'Split Adjudication'
+      - Select available sections from the right of the screen
+      - Click 'Add Selected' button to the appropriate new adjudication (A or B)
+      - Once all sections of have been added, click 'Split Adjudication' button{{:split-adj.png?nolink&800|split-adj.png}}
+  - Merge Adjudications: access from the three dot button on an adjudication card
+      - Current adjudication is preselected
+      - Select from available adjudications to merge
+      - Click 'Marge Adjudication' button and confirm merge{{:merge-adj.png?nolink&800|merge-adj.png}}
+  - Global Documents: access from three dot button on Adjudication Card
+      - Add Global Document: Click 'Add Global Document' button at top right of screen
+      - View/Edit Global Document: Click three dots at end of global document row{{:adj-global-doc.png?nolink&800|adj-global-doc.png}}
+

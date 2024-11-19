@@ -1,0 +1,7 @@
+====== Account Settings ======
+
+Your Account Settings allows you to change a couple of important settings in WRATS. You can access your Account Settings by clicking on your avatar in the top right of the screen and selecting 'Account Settings' from the dropdown menu.
+
+  - **User Information**: Your //Display Name and Initials//  appear in various places within WRATS (for exmple, in change logs).
+  - **Email Notifications:**  WRATS will notifiy you about changes that are made to any subfiles you are Watching. This settings lets you change how frequently you receive notifications about subfile changes. \\  \\  \\ {{:account-settings.png?nolink&600}}
+

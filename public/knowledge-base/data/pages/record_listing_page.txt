@@ -1,0 +1,33 @@
+====== Record Listing ======
+
+{{:record-list-1.jpg?nolink&800|record-list-1.jpg}}
+
+  - To access Records Listings page, click 'Records' from the main menu at the top of the screen.
+  - **Record Type Selector:**  Use the arrow next to the record type to select a new record type. Available record types include:
+      - Subfiles
+      - Persons
+      - Authorized Agents
+      - Water Rights
+      - Points of Diverions (POD)
+      - Places of Use (POU)
+      - Documents \\ {{:record-list-2.jpg?nolink&300|record-list-1.jpg}}
+  - **Filtering Records**
+      - Open Filters by clicking 'Filters' (below the main navigation)
+      - Select Filters
+      - Click 'Apply Filters' \\ {{:adjudications-filter.jpg?nolink&800|adjudications-filter.jpg}}
+  - **Search Records: **you can search the records using the search field next to the filters button. Clicking the dropdown allows you to change the search criteria.
+      - {{:record-list-4.jpg?nolink&800|record-list-4.jpg}}
+  - **Adding a Record**: you can add a some record types to WRATS from the record list screen
+      - Click 'Add Record'
+      - Complete the form and submit the form{{:record-list-5.jpg?nolink&800|record-list-5.jpg}}
+  - **Row Functionality**: each row has columns of information. Each row also has a few additional features:
+      - Hovering over a circle with dots lets you see hidden content.
+      - Clicking on row will take you to the specific record detail screen
+      - {{:record-list-6.jpg?nolink&800|record-list-5.jpg}}
+  - **Bulk Features**: each record type includes certain bulk features. To use bulk actions:
+      - click the square checkbox at the left of the record rows you want to select
+      - click the specific bulk action at the bottom of the screen
+      - complete the instruction in the modal to perform the bulk action
+
+{{:record-list-7.jpg?nolink&800|record-list-7.jpg}}
+
