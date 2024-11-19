@@ -150,7 +150,7 @@ class DatabaseSeeder extends Seeder
             HydrographicDocumentSeeder::class,
             SubfilePersonSeeder::class,
 
-            PodSeeder::class,
+            PODSeeder::class,
 
         ]);
         \Schema::enableForeignKeyConstraints();
