@@ -4,15 +4,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: wrats-app
+    container_name: wrats-app-7
     volumes:
       - $PWD:/var/www/html
     ports:
-      - "8000:80"
+      - "8007:80"
     environment:
       - APACHE_DOCUMENT_ROOT=/var/www/html/public
       - DB_CONNECTION=mysql
-      - DB_HOST=mysql
+      - DB_HOST=mysql7
       - DB_PORT=3306
       - DB_DATABASE=wrats-application
       - DB_USERNAME=oseroot
